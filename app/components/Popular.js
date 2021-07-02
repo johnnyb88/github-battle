@@ -8,6 +8,8 @@ import {
   FaExclamationTriangle,
 } from "react-icons/fa";
 
+
+// ----- languages nav bar component ----- //
 function LanguageNav({ selected, onUpdateLanguage }) {
   const languages = ["All", "JavaScript", "Ruby", "Java", "CSS", "Python"];
 
@@ -33,6 +35,7 @@ LanguageNav.propTypes = {
   onUpdateLanguage: PropTypes.func.isRequired,
 };
 
+// ----- Repositories grid container component ----- //
 function ReposGrid({ repos }) {
   return (
     <ul className="grid space-around">
@@ -89,6 +92,7 @@ ReposGrid.propTypes = {
   repos: PropTypes.array.isRequired,
 };
 
+// ----- main component containing all other components ----- //
 export default class Popular extends React.Component {
   constructor(props) {
     super(props);
@@ -111,7 +115,7 @@ export default class Popular extends React.Component {
       selectedLanguage,
       error: null,
     });
-
+    // --- updates state on new selected language --- //
     if (!this.state.repos[selectedLanguage]) {
       fetchPopularRepos(selectedLanguage)
         .then((data) => {
@@ -131,11 +135,13 @@ export default class Popular extends React.Component {
         });
     }
   }
+  
   isLoading() {
     const { selectedLanguage, repos, error } = this.state;
 
     return !repos[selectedLanguage] && error === null;
   }
+
   render() {
     const { selectedLanguage, repos, error } = this.state;
 
