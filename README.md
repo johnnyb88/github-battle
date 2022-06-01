@@ -12,4 +12,7 @@ npm start
 ```
 
 ## Screenshots
-![]
+![home page](https://github.com/johnnyb88/github-battle/blob/main/public/home.png?raw=true)
+![home page dark theme](https://github.com/johnnyb88/github-battle/blob/main/public/homeDark.png?raw=true)
+![battle page](https://github.com/johnnyb88/github-battle/blob/main/public/battle.png?raw=true)
+![battle results](https://github.com/johnnyb88/github-battle/blob/main/public/battleResults.png?raw=true)
